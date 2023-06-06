@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ImageUpload from "./components/ImageUpload";
+import Header from "./components/Header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>{
+
+    return (
+        <>
+            <Header />
+            <div className = "main-container" style = {{border: "2px solid red", width: "100vw", display: "flex", justifyContent: "center", alignItems:"center"}}>
+                <div className = "left-container" style = {{width: "50%",  border: "2px solid green"}}>
+                    <ImageUpload />
+                </div>
+                <div className = "right-container" style = {{width: "50%", border: "2px solid black"}}></div>
+            </div>
+        </>
+    )
 }
 
 export default App;
